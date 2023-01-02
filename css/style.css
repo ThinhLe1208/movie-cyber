@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: black;
+}
+
+html,
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #717171;
+}
+
+.bor-bot {
+    position: relative;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+.hover-bot {
+    position: relative;
+}
+
+.hover-bot::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: all linear 0.3s;
+}
+
+.active.hover-bot::after {
+    width: 100%;
+}
+
+.hover-bot:hover::after {
+    width: 100%;
+}
+
+
+/* HEADER */
+#movieNavbar .nav-link {
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+#movieNavbar .nav-item {
+    position: relative;
+    padding: 8px 12px;
+}
+
+.header .navbar .navbar-toggler {
+    fill: orange;
+    border: none;
+}
+
+.header .navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+#navFixed {
+    transform: translateY(-100%);
+    transition: all linear 0.3s;
+}
+
+/* CAROUSEL */
+#movieCarousel {
+    height: 650px;
+}
+
+#movieCarousel .carousel-inner {
+    height: 100%;
+}
+
+#movieCarousel .carousel-indicators {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: calc(1.5rem * 0.5);
+}
+
+#movieCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-clip: border-box;
+}
+
+#movieCarousel .carousel-indicators .active {
+    background: #fff;
+}
+
+#movieCarousel .carousel-item {
+    height: 100%;
+}
+
+#movieCarousel .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#movieCarousel .carousel-caption {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.carouel-trailer span {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+/* NEW */
+.new {
+    padding: 75px 0;
+}
+
+.new__title .hover-bot::after {
+    width: 150px;
+}
+
+.new__item {}
+
+.new__item .new__info {
+    padding: 16px 0;
+}
+
+.new__img img {
+    display: block;
+    width: 100%;
+}
+
+.new__overlay,
+.new__overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.new__overlay {
+    background-image: linear-gradient(to bottom, rgba(250, 188, 73, 0.9), rgba(255, 166, 0, 0.9));
+    width: 200%;
+    transform: skewX(30deg) translateX(-100%);
+    transform-origin: bottom left;
+    transition: all linear 0.2s;
+}
+
+.new__img:hover .new__overlay {
+    transform: skewX(30deg) translateX(0);
+}
+
+.new__overlay-text {
+    opacity: 0;
+    transition: all linear 0.3s;
+}
+
+.new__img:hover .new__overlay-text {
+    opacity: 1;
+}
+
+.new__overlay-text i {
+    display: block;
+    width: 65px;
+    height: 65px;
+    color: #fff;
+    text-align: center;
+    line-height: 65px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all linear 0.3s;
+}
+
+.new__overlay-text i:hover {
+    transform: scale(0.9);
+}
+
+/* FILMS */
+
+#filmsTab .nav-item .nav-link,
+#filmsTab .nav-link.active {
+    border: none;
+}
+
+#filmsTab .nav-item .nav-link {
+    color: black;
+    font-size: 18px;
+    padding: 15px 30px;
+}
+
+#filmsTab .nav-link.active {
+    color: orange;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#filmsTabContent .films__time-title span {
+    margin-right: 8px;
+}
+
+/* COMING */
+
+.coming {
+    background: #101010 url(../img/slide-3.png) center /cover no-repeat scroll;
+    padding: 75px 0;
+}
+
+.coming__left {}
+
+.coming__title {}
+
+.coming__info {}
+
+.coming__sub {}
+
+.coming__right {}
+
+
+/* PICTURES */
+
+.pictures {
+    background-color: #101010;
+    padding: 50px 0;
+}
+
+.pictures__item {
+    position: relative;
+    overflow: hidden;
+}
+
+.pictures__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    opacity: 0.6;
+    transition: all linear 0.3s;
+}
+
+.pictures__overlay:hover {
+    opacity: 0;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 60px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding-top: 50px;
+}
+
+.footer__item {}
+
+.footer__item h3 {
+    color: #ec7532;
+    margin-bottom: 16px;
+}
+
+.footer__item ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer__item li {
+    margin-bottom: 10px;
+}
+
+.footer__item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__item i {
+    width: 25px;
+}
